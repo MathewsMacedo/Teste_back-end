@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste Back-End</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <%= nav_bar brand: "Home", brand_link: root_url,class:"nav nav-tabs", role:"tablist" do%>
+    <%= menu_group do%>
+        <%= menu_item "Contato", contatos_path,class:"nav-item nav-link active"%>
+    <%end%>
+  <%end%>
+<div class="container">
+    <body>
+      <%= yield %>
+    </body>
+</div>
+</html>

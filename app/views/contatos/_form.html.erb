@@ -1,0 +1,52 @@
+<% if @contato%>
+    <% @contato.errors.full_messages.each do |msg|%>
+        <div class="alert alert-danger" role="alert">
+        <%= msg %>
+        </div>
+    <% end %>
+<%end%>
+
+<%= form_for @contato do |form|%>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <%= form.label :nome%>
+                    <%= form.text_field :nome, class:"form-control"%> <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-8">
+                <div class="form-group">
+            <%= form.label :email%>
+            <%= form.email_field :email, class:"form-control"%> <br/>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <%= form.label :telefone%>
+                    <%= form.telephone_field :telefone, class:"form-control"%><br/>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <%= form.label :mensagem%><br/>
+                    <%= form.text_area :mensagem, rows:"4", class:"form-control"%><br/>
+            </div>
+            </div>
+        </div>
+    </div>
+<%= form.submit "Enviar", class:"btn btn-primary" %>
+ <%= link_to  "Listar Contatos", contatos_show_path, class:"btn btn-default"%>
+<%end%>
