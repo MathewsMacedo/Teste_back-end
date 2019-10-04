@@ -40,6 +40,16 @@ function getFullDate(){
 
 }
  
-  console.log(getGUID());
-  console.log(getURL());
-  console.log(getFullDate());
+(async () => {
+  await fetch('http://localhost:3000/produtos', {
+      method: 'POST',
+      headers: {        
+          'Content-Type': 'application/json'
+          },
+                body: JSON.stringify(
+              {
+                  "produto": { "nome":"Bicicleta","descricao":"TESTE VIA JSON - JS","departamento_id": 22,"preco":199,"quantidade":3}
+              }
+            )
+  });
+})();
