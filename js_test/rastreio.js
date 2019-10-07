@@ -35,21 +35,38 @@ function getFullDate(){
     var sec = data.getSeconds();
     var mil = data.getMilliseconds();
 
-    return data = a+'-'+m+'-'+d+' '+h+':'+min+':'+sec+':'+mil;
+    return data = d+'-'+m+'-'+a+' '+h+':'+min+':'+sec+':'+mil;
 
 
 }
  
-(async () => {
-  await fetch('http://localhost:3000/produtos', {
-      method: 'POST',
-      headers: {        
-          'Content-Type': 'application/json'
-          },
-                body: JSON.stringify(
-              {
-                  "produto": { "nome":"Bicicleta","descricao":"TESTE VIA JSON - JS","departamento_id": 22,"preco":199,"quantidade":3}
-              }
-            )
-  });
-})();
+
+function getJson(){
+
+  var contato = {"produto":{"nome": getGUID(),"descricao":getURL(),"quantidade":getFullDate(),"departamento_id":22 }}
+  return contato;
+
+}
+
+
+
+function sendPost(url,json){
+  (async () => {
+    await fetch(url, {
+        method: 'POST',
+        headers: {        
+            'Content-Type': 'application/json'
+            },
+                  body: JSON.stringify(json)
+    });
+  })();
+}
+
+
+
+
+console.log(getJson());
+
+
+
+console.log(sendPost('http://localhost:3000/produtos',getJson()));

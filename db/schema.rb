@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_140457) do
+ActiveRecord::Schema.define(version: 2019_10_07_153304) do
 
   create_table "contatos", force: :cascade do |t|
     t.string "nome"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2019_10_03_140457) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_contatos_on_email", unique: true
+  end
+
+  create_table "rastreios", force: :cascade do |t|
+    t.string "guid"
+    t.string "url"
+    t.string "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
