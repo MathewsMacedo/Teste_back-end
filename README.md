@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
 
-Things you may want to cover:
+  Ruby 2.5.6
+  
+## Rails version
 
-* Ruby version
+  Rails 5.2.1 > 
+  
+## Getting Started
 
-* System dependencies
+* Clone this repo ```git clone https://github.com/MathewsMacedo/Teste_back-end```
 
-* Configuration
+## System dependencies
 
-* Database creation
+* ```bundle install``` to install all required dependencies
 
-* Database initialization
+## Database creation
+* ```gem install sqlite3``` to install database
+* ```rails db:create``` to create database
+* ```rails db:migrate``` to make all database migrations
 
-* How to run the test suite
+## How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* ```rails server``` to start the local server
+* ```localhost:3000``` to open  in your browser 
 
-* Deployment instructions
+## Services (job queues, cache servers, search engines, etc.)
 
 * ...
