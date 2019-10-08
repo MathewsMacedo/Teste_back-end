@@ -49,15 +49,14 @@ function getJson(){
 }
 
 
-
-function setPost(url,json){
-  (async () => {
+function setPost(url, json) {
+  (async function () {
     await fetch(url, {
-        method: 'POST',
-        headers: {        
-            'Content-Type': 'application/json'
-            },
-                  body: JSON.stringify(json)
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(json)
     });
   })();
 }
