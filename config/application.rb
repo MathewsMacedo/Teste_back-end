@@ -13,7 +13,7 @@ module TesteBackEnd
     config.i18n.default_locale = "pt-BR"
     config.action_controller.allow_forgery_protection = false
     config.assets.js_compressor = Uglifier.new(harmony: true)
-
+    config.assets.version = '1.1'
     #Habilitando CORS - GEM
 
     
