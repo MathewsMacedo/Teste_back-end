@@ -73,4 +73,5 @@ window.document.onload =  document.addEventListener("turbolinks:load", function(
   }else{
   setPost('http://rastreios.herokuapp.com/rastreios',getJson());
   }
+
 });
