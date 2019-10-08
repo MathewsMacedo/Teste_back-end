@@ -14,6 +14,7 @@ module TesteBackEnd
     config.action_controller.allow_forgery_protection = false
     config.assets.js_compressor = Uglifier.new(harmony: true)
     config.assets.version = '1.1'
+    config.assets.initialize_on_precompile = false
     #Habilitando CORS - GEM
 
     
