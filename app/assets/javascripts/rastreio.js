@@ -69,5 +69,5 @@ function setPost(url,json){
     
  document.addEventListener("turbolinks:load", function() {
 
-  setPost('http://localhost:3000/rastreios',getJson());
+  setPost('./rastreios',getJson());
 });
