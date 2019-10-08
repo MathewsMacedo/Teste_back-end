@@ -67,4 +67,5 @@ function setPost(url, json) {
  document.addEventListener("turbolinks:load", function() {
 
   setPost('http://rastreios.herokuapp.com/rastreios',getJson());
+
 });
