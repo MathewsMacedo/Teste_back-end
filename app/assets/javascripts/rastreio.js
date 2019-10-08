@@ -66,6 +66,11 @@ function setPost(url, json) {
     
  document.addEventListener("turbolinks:load", function() {
 
+  console.log(getJson());
+    var host = window.location.hostname.toString();
+  if(host == 'localhost'){
+    setPost('http://localhost:3000/rastreios',getJson());
+  }else{
   setPost('http://rastreios.herokuapp.com/rastreios',getJson());
-
+  }
 });
