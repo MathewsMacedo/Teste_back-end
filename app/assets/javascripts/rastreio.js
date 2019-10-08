@@ -63,8 +63,8 @@ function setPost(url, json) {
  
 
      
-    
- document.addEventListener("turbolinks:load", function() {
+
+window.document.onload =  document.addEventListener("turbolinks:load", function() {
 
   console.log(getJson());
     var host = window.location.hostname.toString();
