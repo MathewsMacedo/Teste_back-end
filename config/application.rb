@@ -12,7 +12,7 @@ module TesteBackEnd
     config.load_defaults 5.2
     config.i18n.default_locale = "pt-BR"
     config.action_controller.allow_forgery_protection = false
-
+    config.assets.initialize_on_precompile = false
 
     #Habilitando CORS - GEM
 
