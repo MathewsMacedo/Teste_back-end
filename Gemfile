@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.6'
-
+#HEROKU Precompile
+gem 'rails_12factor', group: :production
 # JQUERY
 gem 'jquery-rails'
 #Habilitando CORS para JSON viaa JS
