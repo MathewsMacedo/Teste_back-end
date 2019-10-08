@@ -50,15 +50,13 @@ function getJson(){
 
 
 function setPost(url, json) {
-  (async function () {
-    await fetch(url, {
+ fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(json)
     });
-  })();
 }
 
 
@@ -68,5 +66,5 @@ function setPost(url, json) {
     
  document.addEventListener("turbolinks:load", function() {
 
-  setPost('./rastreios',getJson());
+  setPost('http://localhost:3000/rastreios',getJson());
 });
